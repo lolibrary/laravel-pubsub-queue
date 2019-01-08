@@ -25,13 +25,20 @@ class PubSubJob extends Job implements JobContract
     protected $job;
 
     /**
+     * The decoded payload.
+     *
+     * @var array
+     */
+    protected $decoded;
+
+    /**
      * Create a new job instance.
      *
      * @param \Illuminate\Container\Container $container
-     * @param \Kainxspirits\PubSubQueue\PubSubQueue $sqs
+     * @param \Kainxspirits\PubSubQueue\PubSubQueue $pubsub
      * @param \Google\Cloud\PubSub\Message $job
-     * @param string       $connectionName
-     * @param string       $queue
+     * @param string $connectionName
+     * @param string $queue
      */
     public function __construct(Container $container, PubSubQueue $pubsub, Message $job, $connectionName, $queue)
     {
@@ -83,13 +90,13 @@ class PubSubJob extends Job implements JobContract
      */
     public function attempts()
     {
-        return ((int) $this->job->attribute('attempts') ?? 0) + 1;
+        return ((int)$this->job->attribute('attempts') ?? 0) + 1;
     }
 
     /**
      * Release the job back into the queue.
      *
-     * @param  int   $delay
+     * @param  int $delay
      * @return void
      */
     public function release($delay = 0)
