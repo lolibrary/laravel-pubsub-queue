@@ -13,6 +13,15 @@ use Illuminate\Contracts\Queue\Job as JobContract;
 
 class PubSubJobTests extends TestCase
 {
+    protected $messageId;
+    protected $messageData;
+    protected $messageEncodedData;
+    protected $container;
+    protected $queue;
+    protected $client;
+    protected $message;
+    protected $job;
+
     public function teardown()
     {
         //
