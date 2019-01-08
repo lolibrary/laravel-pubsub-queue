@@ -1,11 +1,11 @@
 <?php
 
-namespace Kainxspirits\PubSubQueue\Jobs;
+namespace Lolibrary\PubSub\Jobs;
 
 use Illuminate\Queue\Jobs\Job;
 use Google\Cloud\PubSub\Message;
 use Illuminate\Container\Container;
-use Kainxspirits\PubSubQueue\PubSubQueue;
+use Lolibrary\PubSub\PubSubQueue;
 use Illuminate\Contracts\Queue\Job as JobContract;
 
 class PubSubJob extends Job implements JobContract
@@ -13,7 +13,7 @@ class PubSubJob extends Job implements JobContract
     /**
      * The PubSub queue.
      *
-     * @var \Kainxspirits\PubSubQueue\PubSubQueue
+     * @var \Lolibrary\PubSub\PubSubQueue
      */
     protected $pubsub;
 
@@ -35,7 +35,7 @@ class PubSubJob extends Job implements JobContract
      * Create a new job instance.
      *
      * @param \Illuminate\Container\Container $container
-     * @param \Kainxspirits\PubSubQueue\PubSubQueue $pubsub
+     * @param \Lolibrary\PubSub\PubSubQueue $pubsub
      * @param \Google\Cloud\PubSub\Message $job
      * @param string $connectionName
      * @param string $queue

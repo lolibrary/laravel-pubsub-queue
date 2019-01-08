@@ -1,9 +1,9 @@
 <?php
 
-namespace Kainxspirits\PubSubQueue\Connectors;
+namespace Lolibrary\PubSub\Connectors;
 
 use Google\Cloud\PubSub\PubSubClient;
-use Kainxspirits\PubSubQueue\PubSubQueue;
+use Lolibrary\PubSub\PubSubQueue;
 use Illuminate\Queue\Connectors\ConnectorInterface;
 
 class PubSubConnector implements ConnectorInterface

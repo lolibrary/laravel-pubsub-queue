@@ -1,8 +1,7 @@
 {
-    "name": "kainxspirits/laravel-pubsub-queue",
-    "description": "Queue driver for Google Cloud Pub/Sub.",
+    "name": "lolibrary/pubsub",
+    "description": "Queue Driver for Google Cloud Pub/Sub.",
     "keywords": [
-        "kainxspirits",
         "laravel",
         "queue",
         "gcp",
@@ -15,10 +14,15 @@
         {
             "name": "Kendryck",
             "email": "kainxspirits@users.noreply.github.com"
+        },
+        {
+            "name": "Amelia Ikeda",
+            "email": "amelia@lolibrary.org"
         }
     ],
     "require": {
         "php" : ">=7.1",
+        "ext-json": "*",
         "illuminate/queue": "~5.7.0",
         "google/cloud-pubsub": "^1.1"
     },
@@ -27,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Kainxspirits\\PubSubQueue\\": "src/"
+            "Lolibrary\\PubSub\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Kainxspirits\\PubSubQueue\\Tests\\": "tests/"
+            "Lolibrary\\Tests\\PubSub": "tests/"
         }
     },
     "scripts": {
@@ -41,7 +45,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Kainxspirits\\PubSubQueue\\PubSubQueueServiceProvider"
+                "Lolibrary\\PubSub\\PubSubQueueServiceProvider"
             ]
         }
     },

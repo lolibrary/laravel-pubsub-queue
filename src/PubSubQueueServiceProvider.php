@@ -1,9 +1,9 @@
 <?php
 
-namespace Kainxspirits\PubSubQueue;
+namespace Lolibrary\PubSub;
 
 use Illuminate\Support\ServiceProvider;
-use Kainxspirits\PubSubQueue\Connectors\PubSubConnector;
+use Lolibrary\PubSub\Connectors\PubSubConnector;
 
 class PubSubQueueServiceProvider extends ServiceProvider
 {

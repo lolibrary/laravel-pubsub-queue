@@ -1,14 +1,14 @@
 <?php
 
-namespace Kainxspirits\PubSubQueue\Tests\Unit\Jobs;
+namespace Lolibrary\Tests\Queue\Unit\Jobs;
 
 use ReflectionClass;
 use PHPUnit\Framework\TestCase;
 use Google\Cloud\PubSub\Message;
 use Illuminate\Container\Container;
 use Google\Cloud\PubSub\PubSubClient;
-use Kainxspirits\PubSubQueue\PubSubQueue;
-use Kainxspirits\PubSubQueue\Jobs\PubSubJob;
+use Lolibrary\PubSub\PubSubQueue;
+use Lolibrary\PubSub\Jobs\PubSubJob;
 use Illuminate\Contracts\Queue\Job as JobContract;
 
 class PubSubJobTests extends TestCase
